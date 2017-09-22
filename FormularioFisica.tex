@@ -1,0 +1,230 @@
+\documentclass[a4paper]{article}
+
+\usepackage{amsmath}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{mathrsfs}
+\usepackage{amssymb}
+
+\DeclareMathOperator{\Div}{div}
+\DeclareMathOperator{\Rot}{rot}
+\newcommand{\parder}[2]{\frac{\partial {#1}}{\partial {#2}}}
+\everymath{\displaystyle}
+\renewcommand{\arraystretch}{2}
+\newcommand\T{\rule{0pt}{2.6ex}}       % Top strut
+\newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
+
+\begin{document}
+Vinicius Pavanelli Vianna - NUSP 3155408
+
+\begin{tabular}{|l|l|}
+\hline 
+$ \Div E = \frac{\rho}{\epsilon_0} $ & $ \oint_S E.dS = \frac{Q}{\epsilon_0} $ \\
+$ \Div B = 0 $ & $ \oint_S B.dS = \int_V \Div B \, dv = 0 $\\
+$ \Rot E = -\parder{B}{t} $ & $ \oint_C E . dl = - \int_S \parder{B}{t}.dS = - \frac{d\Phi_B}{dt} $\\
+$ \Rot B = \mu_0\vec{J} + \epsilon_0\mu_0\parder{E}{t} $ & $ \oint_C \vec{B} dl = \mu_0 i + \epsilon_0\mu_0 \oint_S \parder{E}{t} dS = \mu_0 i + \epsilon_0\mu_0 \frac{d\Phi_e}{dt} $\\
+&\\
+\hline
+\end{tabular}
+\begin{tabular}{|l|}
+\hline
+$ B = \frac{\mu_0 i }{4\pi}\frac{\oint dl \times \hat{r}}{r^2} $ \\
+$ V = \frac{1}{4\pi\epsilon_0}\frac{Q}{r} = k \frac{Q}{r} $ \\
+$ E = \frac{1}{4\pi\epsilon_0}\frac{Q}{r^2} \hat{r} = -grad\,V $ \\
+$ V(r) = -\int_\infty^r E.dl = \frac{q}{4\pi\epsilon_0 r} $ \\
+$ \vec{F} = q \big( \vec{E} + \vec{v} \times \vec{B} ) \qquad \vec{F} = i \oint_C dl \times \vec{B} $ \\
+$ C = \frac{Q}{V} = \frac{\epsilon_0 A}{d} $ \\
+\\
+\hline
+\end{tabular}
+\begin{tabular}{|l|}
+\hline
+$ \frac{\partial^2 B_y}{\partial z^2} - \mu_0\epsilon_0 \frac{\partial^2 B_y}{\partial t^2} = 0 $ \\
+$ \frac{\partial^2 E_x}{\partial z^2} - \mu_0\epsilon_0 \frac{\partial^2 E_x}{\partial t^2} = 0 $ \\
+$ B = \frac{A}{c} \cos ( kz - wt) \hat{y} $ \\
+$ T = \frac{2\pi}{w} \qquad f = \frac{1}{T} \qquad \lambda = \frac{2\pi}{k} $ \\
+$ \frac{E}{B} = c \qquad S = \frac{1}{\mu_0} E \times B $ \\
+$ u_E = \frac{1}{2}\epsilon_0E^2 \qquad = \qquad u_B = \frac{B^2}{2\mu_0} $ \\
+$ I = S_{med} = \frac{E_{max}B_{max}}{2\mu_0} = c.u_{med} $ \\
+$ P = (1+f_{ref})\frac{I}{c} \qquad I = I_0 \cos^2 \theta $ \\
+\\
+\hline
+\end{tabular}
+\begin{tabular}{|l|}
+\hline
+$ E = hf \qquad \lambda = \frac{h}{p} \qquad \lambda_n = \frac{2l}{n} \qquad p_n = \pm \frac{h}{\lambda_n} = \pm n \frac{h}{2l} $ \\
+$ E_n = \frac{1}{2m}p_n^2 = n^2 \frac{h^2}{2ml^2} $ \\
+$ p_f = h\big( \frac{3n}{8\pi} \big)^{ \frac{1}{3} } \qquad v_f = \frac{p_f}{m_e} $ \\
+\\
+\hline
+\end{tabular}
+\\
+\begin{tabular}{|l|}
+\hline
+$ k = \frac{1}{ 4 \pi \epsilon_0 } = 10^{-7} c^2 = 8,98755\times 10^9 \qquad N \times \frac{ m^2 }{ C^2 } $ \\
+$ e = 1,602 177 33\times 10^{-19} \qquad C $\\
+$ \epsilon_0 = 8,854 187 817 \times 10^{-12} \frac{F}{m} $ \\
+$ \mu_0 = 4\pi \times 10^{-7} \qquad \frac{N}{A^2} $ \\
+$ c = 2,997 924 58 \times 10^8 \qquad \frac{m}{s} $ \\
+$ m_e = \frac{e^2}{4 \pi \epsilon_0 r_0 c^2 } = 9,109 389 7 \times 10^{-31} \qquad kg $ \\
+$ h = 6,626 075 \times 10^{-34}\qquad J.s $ \\
+$ \lambda_c = \frac{h}{m_e c} = 2,426 310 58 \qquad pm $ \\
+$ 1 u = 931,494 32 \qquad \frac{MeV}{c^2} $ \\
+$ P_0 = 1 atm = 1,013 \times 10^5 Pa $\\
+$ R = 8,315 \frac{J}{mol}K = 0,0821 L\frac{atm}{mol}K $\\
+$ k_B = \frac{R}{N_A} = 1,38 \times 10^{-23} J/K $\\
+$ N_A = 6,02 \times 10^{-23} \qquad \frac{moleculas}{mol} $\\
+$ 1 cal = 4,186 J $\\
+\\
+\hline
+\end{tabular}
+\begin{tabular}{|l|}
+\hline
+$ \frac {\sin \theta_2}{\sin \theta_1} = \frac {v_2}{v_1} $ \\
+$ n = \frac{c}{v} $ \\
+$ n_1 \sin \theta_1 = n_2 \sin \theta_2 $ \\
+\hline
+$ M = \frac{h'}{h} = - \frac{q}{p} $ \\
+$ \frac{1}{p} + \frac{1}{q} = \frac{1}{p} $ \\
+\\
+\hline
+\end{tabular}
+\begin{tabular}{|l|}
+\hline
+$ \delta = d \sin \theta $ \\
+$ \delta = d \sin \theta_{bril} = m\lambda $\\
+$ \delta = d \sin \theta_{esc} = (m+\frac{1}{2})\lambda $\\
+$ 2 d \sin \theta_{cris} = m \lambda $\\
+\\
+\hline
+\end{tabular}
+\newpage
+\begin{tabular}{|l|}
+\hline
+$ \mathscr{P} = \sigma A e T^{-4} $ \\
+$ \lambda_{max} T = 2,898 \times 10^{-3} m.K $ \\
+$ K_{max} = hf - \phi $ \\
+$ \lambda_c = \frac{c}{f_c} = \frac{c}{\phi / h} = \frac{hc}{\phi} $ \\
+$ \lambda ' - \lambda_0 = \frac{h}{m_e c}(1 -  \cos \theta ) $ \\
+$ \lambda = \frac{h}{p} = \frac {h}{mv} $ \\
+$ \Delta x \Delta p_x \leq \frac{\hslash}{2} \qquad \Delta E \Delta t \leq \frac{\hslash}{2} $\\
+\\
+\hline
+\end{tabular}
+\begin{tabular}{|l|}
+\hline
+
+$ \frac{dN}{dt} = - \lambda N \qquad N = N_0 e^{-\lambda t} $ \\
+$ R = \left| \frac{dN}{dt} \right| = N_0 \lambda e^{-\lambda t} = R_0 e^{-\lambda t} $ \\
+$ T_{\frac{1}{2}} = \frac{ln 2}{\lambda} = \frac{0,693}{\lambda} $ \\
+$ Q = ( M_X - M_Y - M_\alpha ) c^2 = ( M_X - M_Y - M_\alpha ) \times 931,494 MeV/u $\\
+\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|l|}
+\hline
+
+$ \int_{-\infty}^{\infty} | \Psi |^2 dx = \int_{-\infty}^{\infty} | \Psi |^2 4\pi r^2 dr = 1 $\\
+$ E_n = \big( \frac{h^2}{8mL^2} \big) n^2 $ \\
+$ E_H = - \big( \frac{k_e e^2}{2a_0}\big) \frac{1}{n^2} = - \frac{13,606 eV}{n^2} $\\
+$ E_{Z_{ef}} = - \frac{ (13,606 eV) Z_{ef}^2}{n^2} $\\
+\\
+
+\hline
+\end{tabular}
+\begin{tabular}{|l|}
+\hline
+
+$ \sin 2\theta = 2 \sin \theta \cos \theta $ \\
+$ \cos 2\theta = \cos^2 \theta - \sin^2 \theta = 1 - 2 \sin^2 \theta = 2 \cos^2 \theta - 1 $\\
+$ \sin ( a \pm b) = \sin a \cos b \pm \cos a \sin b $\\
+
+\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|l|}
+\hline
+
+$ F = -kx \qquad \frac{d^2x}{dt^2} = - \frac{k}{m}x $\\
+$ w = \sqrt{\frac{k}{m}} \qquad E = \frac{kx^2}{2} $ \\
+$ -mg \sin \theta = m \frac{d^2 s}{dt^2} \qquad \frac{d^2\theta}{dt^2} = - \frac{g}{L}\theta $ \\
+\\
+\hline
+\end{tabular}
+\begin{tabular}{|l|}
+\hline
+$ v = \sqrt{\frac{T}{\mu}} $\\
+$ f' = f \Big( \frac{v + v_O}{v - v_S} \Big) $\\
+$ \mathscr{P} = \frac{1}{2}\mu \omega^2A^2v $\\
+$ f_n = \frac{v}{\lambda_n} = \frac{n}{2L}v = \frac{n}{2L}\sqrt{\frac{T}{\mu}} $\\
+\\
+\hline
+\end{tabular}
+\begin{tabular}{|l|}
+\hline
+$ P = P_0 + \rho g h $\\
+$ P_1 + \frac{1}{2}\rho v_1^2 + \rho g y_1 = P_2 + \frac{1}{2}\rho v_2^2 + \rho g y_2 $\\
+\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|l|}
+\hline
+$ T_C = T - 273,15 $\\
+$ T_F = \frac{9}{5}T_C + 32^{\circ} F $\\
+$ \Delta L = \alpha L_i \Delta T $\\
+$ PV = nRT $\\
+$ P = \frac{2}{3}(\frac{N}{V})(\frac{1}{2}m\overline{v^2}) $ \\
+$ \frac{1}{2}m\overline{v^2} = \frac{3}{2}k_BT $\\
+\\
+\hline
+\end{tabular}
+\begin{tabular}{|l|}
+\hline
+$ Q = mc \Delta T $\\
+$ W = - \int_{V_i}^{V_f} P dV $\\
+$ \Delta E_{int} = Q + W $\\
+$ E_{int} = \frac{3}{2}nRT $\\
+$ \gamma = \frac{C_P}{C_V} = \frac{\frac{5}{2}R}{\frac{3}{2}R} = \frac{5}{3} $\\
+$ PV^\gamma = constante $\\
+$ \mathscr{P} = \sigma A e T^{-4} $ \\
+
+\\
+\hline
+\end{tabular}
+\begin{tabular}{|l|}
+\hline
+$ e = \frac{W_{maq}}{|Q_q|} = 1 - \frac{|Q_f|}{|Q_q|} $\\
+$ e_{carnot} = 1 - \frac{T_f}{T_q} $\\
+$ dS = \frac{dQ_r}{T} $\\
+$ S = k_B \, ln \, W $\\
+$ \Delta S = \int_i^f \frac{dQ_r}{T} $\\
+\\
+\hline
+\end{tabular}
+\begin{tabular}{|l|}
+\hline
+$ L_{arc length} = \int \sqrt{1 + \Big(\frac{dy}{dx}\Big)^2} dy $\\
+$ S_{surface} = \int \int_D \sqrt{(f_x)^2 + (f_y)^2 + 1} dA $\\
+$ \oint_C F.dr = \int \int_S \nabla \times F.\hat{n}dS $\\
+$ \int_V \Div F dV = \int_S F.dS $ \\
+$ Ax = B \to A^TAx = A^TB \to x = (A^TA)^{-1} A^TB$\\
+\\
+\hline
+\end{tabular}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
