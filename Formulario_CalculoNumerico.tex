@@ -8,35 +8,37 @@
 \usepackage{mathrsfs}
 \usepackage{amssymb}
 \usepackage{textcomp}
+\usepackage{booktabs,tabularx}
 
 \begin{document}
-Vinicius Pavanelli Vianna - NUSP 3155408
-\vspace{1em}\\
-\\
-\begin{tabular}{lcccc}
+\begin{center}
+Vinicius Pavanelli Vianna - NUSP 3155408 \hfill\\
+\end{center}
+\begin{minipage}[!t]{.5\textwidth}
+%\raggedright
+\begin{tabularx}{\textwidth}{lcccc}
+\toprule
 \multicolumn{5}{c}{IEEE 754 (bits)}\\
 Tamanho & Sinal & expoente & polarização & mantissa\\
-\hline
+\midrule
 32 & 1 & 8 & 127 & 32\\
 64 & 1 & 11 & 1023 & 52\\
-\end{tabular}
-%\vspace{1em}
-\begin{tabular}{ccc}
-Formato & Single & Double\\
-\hline
-$E_{min}$ & $-126$ & $-1022$\\
-$E_{max}$ & $127$ & $1023$ \\
-menor \textnumero & $\approx 1,2 \times 10^{-38}$ & $\approx 2,2 \times 10^{-308}$ \\ 
-maior \textnumero & $\approx 3,4 \times 10^{38}$ & $\approx 1,8 \times 10^{308}$ \\
-$\epsilon$ & $2^{-23} \approx 1,2 \times 10^{-7}$ & $2^{-52} \approx 2,2 \times 10^{-16}$ \\
-Precisão & $\approx 7 digitos decimais$ & $\approx 16 digitos decimais$ \\
-\end{tabular}
-
-\vspace{1em}
-
-\begin{tabular}{c}
+\midrule
+Formato & \multicolumn{2}{c}{Single} & \multicolumn{2}{c}{Double}\\
+\midrule
+$E_{min}$ & \multicolumn{2}{c}{$-126$} & \multicolumn{2}{c}{$-1022$}\\
+$E_{max}$ & \multicolumn{2}{c}{$127$} & \multicolumn{2}{c}{$1023$} \\
+menor \textnumero & \multicolumn{2}{c}{$\approx 1,2 \times 10^{-38}$} & \multicolumn{2}{c}{$\approx 2,2 \times 10^{-308}$} \\ 
+maior \textnumero & \multicolumn{2}{c}{$\approx 3,4 \times 10^{38}$} & \multicolumn{2}{c}{$\approx 1,8 \times 10^{308}$} \\
+$\epsilon$ & \multicolumn{2}{c}{$2^{-23} \approx 1,2 \times 10^{-7}$} & \multicolumn{2}{c}{$2^{-52} \approx 2,2 \times 10^{-16}$} \\
+Precisão & \multicolumn{2}{c}{$\approx$ 7 digitos decimais} & \multicolumn{2}{c}{$\approx$ 16 digitos decimais} \\
+\bottomrule
+\end{tabularx}
+\\
+\begin{tabularx}{\textwidth}{c}
+\toprule
 MMQ\\
-\hline
+\midrule
 $f(x) \approx g(x)$
 $r(x_i) = \sum_{i=1}^{n} [f(x_i) - g(x_i) ]^2$ \\
 $r(x) = \int_c^d [f(x)-g(x)]^2 dx$\\
@@ -59,20 +61,15 @@ a_m \\
 \vdots \\
 \langle g_m,f \rangle \\
 \end{bmatrix}$\\
-\hline
-\end{tabular}
-%\vspace{1em}
-\begin{tabular}{c}
+\midrule
 Linearizações\\
-\hline
+\midrule
 $g(x) = ae^{bx} \implies \ln(g(x)) = \ln(a) + bx$\\
 $g(x) = a10^{bx} \implies \log(g(x))= \log(a) + bx$\\
 $g(x) = ax^b \implies \ln(g(x)) = \ln(a) + b\ln(x)$\\
 $g(x) = \frac{1}{a+bx} \implies \frac{1}{g(x)} = a + bx$\\
 $g(x) = \frac{ax}{b+x} \implies \frac{1}{g(x)} = \frac{b}{a}\frac{1}{x} + \frac{1}{a}$\\
-\end{tabular}\\
-%\vspace{1em}
-\begin{tabular}{c}
+\midrule
 Resíduos MMQ\\
 \hline
 $r(x_i) = \displaystyle\sum_{i=1}^{n} [f(x_i) - g(x_i) ]^2$ \\
@@ -80,12 +77,18 @@ $R^2 = 1 - \frac{SQ_{res}}{SQ_{tot}}$\\
 $\bar{y} = \frac{1}{n}\displaystyle\sum_{i=1}^{n}f(x_i)$ (ponto médio) \\
 $SQ_{tot} = \displaystyle\sum_{i=1}^{n} [g(x_i) - \bar{y}]^2$ (erro total) \\
 $SQ_{res} = \displaystyle\sum_{i=1}^{n} [f(x_i) - \bar{y}]^2$ (erro residual) \\
-\end{tabular}	
-%\vspace{1em}
-\begin{tabular}{c}
+\bottomrule
+\end{tabularx}\\
+\end{minipage}
+\hfill
+\noindent
+\begin{minipage}[!t]{.5\textwidth}
+\begin{tabularx}{\textwidth}{c}
+\toprule
 Forma interpoladora de Lagrange\\
-\hline
-$f(x) \approx P_1(x) = a_0(x-x_1) + a_1(x-x_0), a_0 = \frac{f(x_0)}{x_0-x_1} ; a_1 = \frac{f(x_1)}{x_1-x_0}$ \\
+\midrule
+$f(x) \approx P_1(x) = a_0(x-x_1) + a_1(x-x_0)$\\
+$a_0 = \frac{f(x_0)}{x_0-x_1} ; a_1 = \frac{f(x_1)}{x_1-x_0}$ \\
 %\begin{equation}
 $\begin{aligned}
 f(x) \approx P_2(x) &= (x-x_1)(x-x_2)\frac{f(x_0)}{(x_0-x_1)(x_0-x_2)}\\ 
@@ -96,26 +99,20 @@ f(x) \approx P_2(x) &= (x-x_1)(x-x_2)\frac{f(x_0)}{(x_0-x_1)(x_0-x_2)}\\
 \hline
 $ L_i(x) = \displaystyle\prod_{k=0,k \neq i}^{n} \frac{x-x_k}{x_i-x_k} , i = 0 \dots n$\\
 $f(x) \approx P_n(x)= \displaystyle\sum_{k=0}^n f(x_k)L_k(x)$\\
-\end{tabular}\\
-
-\vspace{1em}
-
-\begin{tabular}{l}
+\midrule
 Forma interpoladora de Newton\\
-\hline
+\midrule
 $\begin{aligned}
 f(x) \approx P_n(x) &= a_1 \\
 &+ a_2(x-x_0) + a_3(x-x_0)(x-x_1) + \dots\\
- &+ a_n(x-x_0)(x-x_1)\dots(x-x_{x-1})
+&+ a_n(x-x_0)(x-x_1)\dots(x-x_{x-1})
 \end{aligned}$\\
 $a_1 = f(x_0)$\\
 $a_2 = \frac{f(x_1)-f(x_0)}{x_1-x_0}$\\
 $a_3 = \frac{ \frac{f(x_2)-f(x_1)}{x_2-x_1} - \frac{f(x_1)-f(x_0)}{x_1-x_0}   }{x_2-x_0}$\\
-\end{tabular}
-%\vspace{1em}
-\begin{tabular}{c}
+\midrule
 Forma Interpoladora de Newton - Diferenças divididas\\
-\hline
+\midrule
 $f[x_i] = f(x_i)$\\
 $f[x_i,x_{i+1}] = \frac{f[x_{i+1}] - f[x_i]}{x_{i+1}-x_i}$\\
 
@@ -130,58 +127,57 @@ f(x) \approx P_n(x) &= f[x_0] + f[x_0,x_1](x-x_0) \\
 \end{aligned}$\\
 
 
-\end{tabular}
-\vspace{1em}\\
-\begin{tabular}{c}
+\midrule
 Erro na interpolação\\
-\hline
+\midrule
 $f(x) = P_n(x) + R_n(x)$\\
 $ R_n(x) = \frac{ (x-x_0)(x-x_1)\dots (x-x_n)}{(n+1)!}f^{(n+1)}(\xi(x)), x_0 < \xi < x_n$\\
 $ M > 0 $ e $ \displaystyle \max_{t\in [x_0,x_n]} |f^{(n+1)}(t)| < M$\\
 $ |R_n(x)| \leq \frac {|x-x_0||x-x_1|\dots |x-x_n|}{(n+1)!}M $\\
 $ |R_n(x)| \leq \frac {|x-x_0||x-x_1|\dots |x-x_n|}{(n+1)!}f[x_0,x_1 \dotsc x_n,x_{n+1}] \iff \exists x_{n+1} $ \\
-\end{tabular}\\
+\bottomrule
+\end{tabularx}\\
+\end{minipage}
+\newpage
+
+
+
+
+
+
 \vspace{1em}
-
-
-\begin{tabular}{lc}
+\begin{tabularx}{\textwidth}{lc}
+\toprule
 \multicolumn{2}{c}{Métodos de Integração Numérica}\\
-\hline
+\midrule
 Ponto Central & $ \displaystyle \int_a^b f(x) dx \approx h \displaystyle \sum_{i+1}{N} f \left(\frac{x_i + x_{i+1}}{2} \right)$ \\
 Trapézio & $ \displaystyle \int_a^b f(x)dx \approx \frac{h}{2} \left[ f(x_0) + 2\left( f(x_1) + \dots + f(x_{N-1}) \right) + f(x_N) \right] $\\
 
 Simpson 1/3 & $ \displaystyle \int_a^b f(x)dx \approx \frac{h}{3} \left[ f(x_0) + 4f(x_1) + 2f(x_2) + 4f(x_3) + \dots + 2f(x_{2N-2}) + 4f(x_{2N-1}) + f(x_{2N}) \right] $\\
 
-Simpson 3/8 & $ \displaystyle \int_a^b f(x)dx \approx \frac{3h}{8} \left[ f(x_0) + 3f(x_1) + 3f(x_2) + 2f(x_3) + \dots + 2f(x_{3N-3}) + 3f(x_{3N-2}) + 3f(x_{3N-1}) + f(x_{3N}) \right] $\\
-
-\end{tabular}\\
-
-\vspace{1em}
-
-\begin{tabular}{lc}
+Simpson 3/8 & $ \displaystyle \int_a^b f(x)dx \approx \frac{3h}{8} [ f(x_0) + 3f(x_1) + 3f(x_2) + 2f(x_3) + \dots + 2f(x_{3N-3}) + 3f(x_{3N-2}) + 3f(x_{3N-1}) + f(x_{3N}) ] $\\
+\midrule
+\multicolumn{2}{c}{Quadratura de Gauss}\\
+\midrule
+Geral & $ \displaystyle \int_a^b w(x)f(x)dx \approx \displaystyle \sum_{i=1}{n} C_if(x_i) $ ($C_i$ são os pesos e $x_i$ são os pontos tabelados \\
+Gauss-Legendre & $w(x)=1, a=-1, b=1$, $n=2 \implies C_1 = C_2 = 1, x_1 =-0,57735027 e x_2 = -0,57735027$\\
+& $ n=2 \implies \displaystyle \int_{-1}^1 f(x)dx \approx f(-0,57735027) + f(0,57735027) $\\
+Gauss-Chebyshev & $w(x) = \frac{1}{\sqrt{1-x^2}}, a=-1, b=1$ \\
+Gauss-Laguerre & $ w(x) = e^{-x}, a=0, b=\infty$\\
+Gauss-Hermite & $ w(x) = e^{-x^2}, a=-\infty, b=\infty$\\
+\midrule
 \multicolumn{2}{c}{Erro na Integração Numérica}\\
-\hline
+\midrule
 Trapézio & $R_1(f) = -\frac{(b-a)}{12}h^2f''(\xi), \xi \in (x_0,x_1) $\\
 Simpson 1/3 & $R_2(f) = -\frac{(b-a)}{180}h^4f^{(4)}(\xi), \xi \in (x_0,x_{2N})$\\
 Simpson 3/8 & $R_3(f) = -\frac{(b-a)}{80}h^4f^{(4)}(\xi), \xi \in (x_0,x_{3N})$\\
-\end{tabular}\\
-\vspace{1em}
+\bottomrule
+\end{tabularx}\\
 
-\begin{tabular}{c}
-Quadratura de Gauss\\
-\hline
-$ \displaystyle \int_a^b w(x)f(x)dx \approx \displaystyle \sum_{i=1}{n} C_if(x_i) $ ($C_i$ são os pesos e $x_i$ são os pontos tabelados \\
-\hline
-Gauss-Legendre: $w(x)=1, a=-1, b=1$, $n=2 \implies C_1 = C_2 = 1, x_1 =-0,57735027 e x_2 = -0,57735027$\\
-$ n=2 \implies \displaystyle \int_{-1}^1 f(x)dx \approx f(-0,57735027) + f(0,57735027) $\\
-Gauss-Chebyshev: $w(x) = \frac{1}{\sqrt{1-x^2}}, a=-1, b=1$ \\
-Gauss-Laguerre: $ w(x) = e^{-x}, a=0, b=\infty$\\
-Gauss-Hermite: $ w(x) = e^{-x^2}, a=-\infty, b=\infty$\\
-\end{tabular}\\
+
 \begin{tabular}{c}
 Lista de Exercícios\\
-\hline
-
+\midrule
 $ y_n = \int_0^1 \frac{x^n}{x+a} dx \implies \int_0^1 \frac{x^1}{1+a}dx < y_n < \int_0^1 \frac{x^n}{a}dx$\\
 $ \frac{1}{(n+1)(1+a)} < y_n < \frac{1}{(n+1)a}$\\
 $ x^n = [(x+a)-a)]^n = \displaystyle\sum_{k=0}^{n} (-1)^k \left( \begin{array}{c}
@@ -189,7 +185,9 @@ n\\
 k
 \end{array}
 \right) (x+a)^{n-k}a^k$\\
-$\begin{aligned}
+
+$
+\begin{aligned}
  y_n &= \displaystyle \int_0^1 \displaystyle \sum_{k=0}^{n} (-1)^k \left( \begin{array}{c}
 n\\
 k
@@ -202,24 +200,29 @@ k
 \end{array}
 \right) \displaystyle \int_0^1 (x+a)^{n-k-1} dx\\
 
-
 &= \displaystyle \sum_{k=0-1}^{n} (-1)^k a^k \left( \begin{array}{c}
 n\\
 k
 \end{array}
 \right) \displaystyle \int_0^1 (x+a)^{n-k-1} dx\\
+
 &+ (-1)^n a^n \left( \begin{array}{c}
 n\\
 n
 \end{array}
 \right) \displaystyle \int_0^1 (x+a)^{-1}dx\\
-
 \end{aligned}
-
-$
-
+$\\
+\hline
+Livro Neide\\
+\hline
+$ I_n = e^{-1} \displaystyle \int_0^1 x^n e^x dx \implies I_n < e^{-1} \max_{0\leq x \leq 1}(e^x) \displaystyle \int_0^1 x^n dx < \frac{1}{n+1} $\\
+$ I_n = e^{-1} \left\{ \displaystyle \left[x^n e^x \right]_0^1 - \displaystyle \int_0^1 n x^{n-1} e^x dx \right\} $\\
+\hline
 \end{tabular}
-\begin{tabular}{c}
+
+
+\begin{tabularx}{.5\textwidth}{c}
 Formulas Gerais\\
 \hline
 $ 
@@ -231,15 +234,7 @@ k
 $ f(x) \approx \displaystyle \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n $\\
 $ e^{x} = \sum^{\infty}_{n=0} \frac{x^n}{n!} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots $\\
 $ \displaystyle \sum_{k=0}^{n-1} ar^k= a \left(\frac{1-r^{n}}{1-r}\right) $
-\end{tabular}
-
-\begin{tabular}{c}
-Livro Neide\\
-\hline
-$ I_n = e^{-1} \displaystyle \int_0^1 x^n e^x dx \implies I_n < e^{-1} \max_{0\leq x \leq 1}(e^x) \displaystyle \int_0^1 x^n dx < \frac{1}{n+1} $\\
-$ I_n = e^{-1} \left\{ \displaystyle \left[x^n e^x \right]_0^1 - \displaystyle \int_0^1 n x^{n-1} e^x dx \right\} $
-\end{tabular}
-
+\end{tabularx}
 
 
 
