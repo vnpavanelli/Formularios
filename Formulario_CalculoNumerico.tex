@@ -177,6 +177,67 @@ $ n=2 \implies \displaystyle \int_{-1}^1 f(x)dx \approx f(-0,57735027) + f(0,577
 Gauss-Chebyshev: $w(x) = \frac{1}{\sqrt{1-x^2}}, a=-1, b=1$ \\
 Gauss-Laguerre: $ w(x) = e^{-x}, a=0, b=\infty$\\
 Gauss-Hermite: $ w(x) = e^{-x^2}, a=-\infty, b=\infty$\\
+\end{tabular}\\
+\begin{tabular}{c}
+Lista de Exercícios\\
+\hline
+
+$ y_n = \int_0^1 \frac{x^n}{x+a} dx \implies \int_0^1 \frac{x^1}{1+a}dx < y_n < \int_0^1 \frac{x^n}{a}dx$\\
+$ \frac{1}{(n+1)(1+a)} < y_n < \frac{1}{(n+1)a}$\\
+$ x^n = [(x+a)-a)]^n = \displaystyle\sum_{k=0}^{n} (-1)^k \left( \begin{array}{c}
+n\\
+k
+\end{array}
+\right) (x+a)^{n-k}a^k$\\
+$\begin{aligned}
+ y_n &= \displaystyle \int_0^1 \displaystyle \sum_{k=0}^{n} (-1)^k \left( \begin{array}{c}
+n\\
+k
+\end{array}
+\right) (x+a)^{n-k-1}a^k dx\\
+
+&= \displaystyle \sum_{k=0}^{n} (-1)^k a^k \left( \begin{array}{c}
+n\\
+k
+\end{array}
+\right) \displaystyle \int_0^1 (x+a)^{n-k-1} dx\\
+
+
+&= \displaystyle \sum_{k=0-1}^{n} (-1)^k a^k \left( \begin{array}{c}
+n\\
+k
+\end{array}
+\right) \displaystyle \int_0^1 (x+a)^{n-k-1} dx\\
+&+ (-1)^n a^n \left( \begin{array}{c}
+n\\
+n
+\end{array}
+\right) \displaystyle \int_0^1 (x+a)^{-1}dx\\
+
+\end{aligned}
+
+$
+
+\end{tabular}
+\begin{tabular}{c}
+Formulas Gerais\\
+\hline
+$ 
+\left( \begin{array}{c}
+n\\
+k
+\end{array}
+\right) = \frac{n!}{k!(n-k)!}$\\
+$ f(x) \approx \displaystyle \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n $\\
+$ e^{x} = \sum^{\infty}_{n=0} \frac{x^n}{n!} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots $\\
+$ \displaystyle \sum_{k=0}^{n-1} ar^k= a \left(\frac{1-r^{n}}{1-r}\right) $
+\end{tabular}
+
+\begin{tabular}{c}
+Livro Neide\\
+\hline
+$ I_n = e^{-1} \displaystyle \int_0^1 x^n e^x dx \implies I_n < e^{-1} \max_{0\leq x \leq 1}(e^x) \displaystyle \int_0^1 x^n dx < \frac{1}{n+1} $\\
+$ I_n = e^{-1} \left\{ \displaystyle \left[x^n e^x \right]_0^1 - \displaystyle \int_0^1 n x^{n-1} e^x dx \right\} $
 \end{tabular}
 
 
