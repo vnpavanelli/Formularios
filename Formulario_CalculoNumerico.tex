@@ -32,6 +32,9 @@ menor \textnumero & \multicolumn{2}{c}{$\approx 1,2 \times 10^{-38}$} & \multico
 maior \textnumero & \multicolumn{2}{c}{$\approx 3,4 \times 10^{38}$} & \multicolumn{2}{c}{$\approx 1,8 \times 10^{308}$} \\
 $\epsilon$ & \multicolumn{2}{c}{$2^{-23} \approx 1,2 \times 10^{-7}$} & \multicolumn{2}{c}{$2^{-52} \approx 2,2 \times 10^{-16}$} \\
 Precisão & \multicolumn{2}{c}{$\approx$ 7 digitos decimais} & \multicolumn{2}{c}{$\approx$ 16 digitos decimais} \\
+\midrule
+\multicolumn{5}{c}{$ F(\beta, t, m, M) \implies x = s \times \beta^e \qquad e \in [-m, M]$}\\
+\multicolumn{5}{c}{$\beta^{-1}(1-\frac{1}{2}\beta{-t}) \leq s \leq 1 - \frac{1}{2}\beta{-t}$}\\
 \bottomrule
 \end{tabularx}
 \\
@@ -77,6 +80,18 @@ $R^2 = 1 - \frac{SQ_{res}}{SQ_{tot}}$\\
 $\bar{y} = \frac{1}{n}\displaystyle\sum_{i=1}^{n}f(x_i)$ (ponto médio) \\
 $SQ_{tot} = \displaystyle\sum_{i=1}^{n} [g(x_i) - \bar{y}]^2$ (erro total) \\
 $SQ_{res} = \displaystyle\sum_{i=1}^{n} [f(x_i) - \bar{y}]^2$ (erro residual) \\
+\midrule
+Serie Fourier\\
+\midrule
+$
+\begin{aligned}
+s_N(x) &= \frac{a_0}{2} + \displaystyle \sum_{n=1}^{N} \left( a_n \cos ( \frac{2\pi n x}{P} ) + b_n\sin ( \frac{2\pi n x}{P}) \right)\\
+&= \displaystyle \sum_{n=-N}^{N} c_n e^{i\frac{2\pi n x}{P}}\\
+\end{aligned}
+$\\
+$ a_n = \frac{2}{P} \displaystyle \int_{x_0}^{x_0+P} s(x) \cos(\frac{2\pi n x}{P}) dx $\\
+$ b_n = \frac{2}{P} \displaystyle \int_{x_0}^{x_0+P} s(x) \sin(\frac{2\pi n x}{P}) dx $\\
+$ c_n = \frac{1}{P} \displaystyle \int_{x_0}^{x_0+P} s(x) e^{-i\frac{2\pi n x}{P}} dx $\\
 \bottomrule
 \end{tabularx}\\
 \end{minipage}
