@@ -150,6 +150,20 @@ $ R_n(x) = \frac{ (x-x_0)(x-x_1)\dots (x-x_n)}{(n+1)!}f^{(n+1)}(\xi(x)), x_0 < \
 $ M > 0 $ e $ \displaystyle \max_{t\in [x_0,x_n]} |f^{(n+1)}(t)| < M$\\
 $ |R_n(x)| \leq \frac {|x-x_0||x-x_1|\dots |x-x_n|}{(n+1)!}M $\\
 $ |R_n(x)| \leq \frac {|x-x_0||x-x_1|\dots |x-x_n|}{(n+1)!}f[x_0,x_1 \dotsc x_n,x_{n+1}] \iff \exists x_{n+1} $ \\
+\midrule
+Polinômios de Legendre\\
+\midrule
+$P_n(x) = 2^n \times \displaystyle\sum_{k=0}^{n} x^k \left( \begin{array}{c}
+n\\
+k
+\end{array}
+\right) \left( \begin{array}{c}
+\frac{n+k-1}{2}\\
+n
+\end{array}
+\right) $ \\
+$ P_0(x) = 1 \qquad P_1(x) = x \qquad P_2(x) = \frac{1}{2} \times (3x^2 - 1) $\\
+$ \int_{-1}^{1} P_m(x) P_n(x)\,dx = {2 \over {2n + 1}} \delta_{mn} $\\
 \bottomrule
 \end{tabularx}\\
 \end{minipage}
